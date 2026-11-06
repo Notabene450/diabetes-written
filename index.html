@@ -1072,6 +1072,121 @@ input[dir="auto"], textarea[dir="auto"]{ unicode-bidi: plaintext; }
 .wans .wlead{font-size:14.5px}
 .wtip{unicode-bidi:plaintext}
 
+
+/* ==================================================================
+   📱 PHONES — everything trimmed so the page fits even a 320 px screen
+   (one block, last in the sheet: it wins over every rule above)
+   ================================================================== */
+@media (max-width:700px){
+  html,body{overflow-x:hidden}
+  body{font-size:14px}
+
+  /* ---- the page: only a slim rail is taken from the left ---- */
+  #page{padding:44px 8px 78px 40px !important;max-width:none !important}
+
+  /* ---- the left rail: a thin strip ---- */
+  #rail{left:2px;top:6px;bottom:6px;width:34px;padding:4px 3px;border-radius:11px;gap:3px;border-width:1.5px}
+  .rsep{margin:1px 0;height:1px}
+  .rbox{width:28px;height:20px;font-size:9px;border-radius:6px;letter-spacing:-.4px}
+  .mini{width:28px;height:19px;font-size:10.5px;border-radius:6px}
+  #railtail{gap:3px;margin-top:3px;padding-top:3px}
+
+  /* ---- top-right: index + search, small ---- */
+  #idxbtn,#searchbtn{width:32px;height:32px;font-size:15px;border-radius:10px;top:6px;right:6px}
+  #searchbtn{right:44px}
+
+  /* ---- bottom-right: the tutor, the key, the wrong-counter, the reset ---- */
+  #aitutorbtn{left:auto !important;right:5px;bottom:5px;width:30px;height:30px;border-radius:10px;font-size:16px}
+  #aisetbtn{left:auto !important;right:40px;bottom:5px;width:30px;height:30px;border-radius:10px;font-size:14px}
+  #dockwrap{right:78px !important;bottom:5px !important}
+  #resetwrap{right:112px !important;top:auto !important;bottom:5px;transform:none !important}
+  #dockbtn{width:30px !important;height:30px !important;font-size:13px !important}
+  #resetbtn2{width:30px !important;height:30px !important;font-size:13px !important;border-radius:10px !important}
+
+  /* ---- the panels open edge to edge ---- */
+  #idxpanel,#searchpanel{left:6px !important;right:6px !important;top:44px !important;width:auto !important;max-height:64vh}
+
+  /* ---- the head of the lecture ---- */
+  .tophead{padding:11px 12px !important;margin:0 0 12px !important;border-radius:13px !important}
+  .tophead > div:first-child{font-size:9.5px !important;letter-spacing:.09em !important}
+  .tophead h1{font-size:19px !important;margin:5px 0 3px !important;line-height:1.2 !important}
+  .tophead > div{font-size:11.5px !important;line-height:1.5 !important}
+  .tophead > div[dir="rtl"]{font-size:11px !important;line-height:1.65 !important;margin-top:8px !important;padding-top:8px !important}
+
+  /* ---- the AI key card ---- */
+  #keycard{padding:11px 12px !important;margin-bottom:12px !important;border-radius:13px !important}
+  .kcphoto{max-width:100%;margin-bottom:8px}
+  .kcplugwrap{gap:6px;margin-bottom:9px}
+  .kcplug{flex:1 1 30%;max-width:none;padding:5px 6px !important;gap:5px;border-radius:10px !important;justify-content:center}
+  .kptxt small{display:none !important}
+  .kptxt{text-align:center}
+  .kplogo{width:28px;height:28px;font-size:14px !important;border-radius:9px}
+  .kptxt{font-size:11.5px !important;line-height:1.25}
+  .kptxt small{font-size:9px !important}
+  .kcact{font-size:12px !important;margin:0 0 9px !important;line-height:1.55}
+  .kcbigwrap{gap:6px;margin:8px 0}
+  .kcbig{flex:1 1 100%;padding:8px 10px !important;font-size:11.5px !important;border-radius:11px !important;min-height:0 !important}
+  #keycard .kcmsg{font-size:10.5px !important;padding:7px 8px !important;line-height:1.5}
+  #keycard .kcmsg .ar{display:block;font-size:10px}
+
+  /* ---- section bars ---- */
+  .secbar{margin:15px 0 8px;gap:5px}
+  .secbar .dot{width:10px;height:10px;border-radius:3px;box-shadow:0 0 0 3px rgba(0,0,0,.06)}
+  .secbar .nm{font-size:9.5px;padding:3px 7px;letter-spacing:.25px}
+  .secbar .ln{height:2px}
+
+  /* ---- the card ---- */
+  .card{padding:9px 9px 8px;border-radius:12px;margin:0 0 12px;border-left-width:5px;scroll-margin-top:6px}
+  .chead{gap:6px}
+  .qnum{min-width:30px;height:30px;font-size:11px;border-radius:9px;padding:0 4px;box-shadow:0 2px 6px rgba(0,0,0,.14)}
+  .secchip{font-size:8.5px;padding:2px 6px;margin-bottom:4px;letter-spacing:.3px}
+  .qtext{font-size:14.5px;line-height:1.42}
+  .flag{font-size:9.5px;padding:1px 7px}
+  .grouphint,.grpbar .glabel{font-size:9.5px !important}
+  .grpbar{padding:8px 9px;border-radius:11px;border-left-width:5px}
+  .grpimg{max-height:180px}
+
+  /* ---- writing area + buttons ---- */
+  .wrow{gap:7px}
+  .wta{min-height:58px;font-size:13.5px;padding:8px 9px;border-radius:11px}
+  .wside{gap:5px}
+  .wside .btn{flex:1 1 46%;font-size:10.5px;padding:7px 5px;border-radius:9px}
+  .btn{font-size:11.5px;padding:7px 9px;border-radius:9px;box-shadow:0 2px 7px rgba(0,0,0,.16)}
+  .btn.tiny{font-size:10px;padding:6px 7px}
+  .actions{gap:6px;margin-top:9px}
+  .ansbox{font-size:12.5px;padding:9px 10px;border-radius:11px;line-height:1.5;border-width:1.5px}
+  .answrap{margin-top:9px}
+  .ainote{font-size:12px;padding:8px 10px;border-radius:10px;line-height:1.55;margin-top:8px}
+  .ainote .apts li{padding-left:14px;margin:4px 0;font-size:12px}
+  .ainote .apts li:before{width:5px;height:5px}
+  .wans{padding:16px 10px 10px;border-radius:12px}
+  .wans .wlead{padding:5px 9px;border-radius:10px;font-size:11.5px}
+  .wans .wsub{padding:3px 9px;margin:10px 0 6px;font-size:11px}
+  .verdict{font-size:11.5px;padding:6px 9px}
+  .wfile,.wmnem{margin-top:8px}
+  .qimgbtn{font-size:11px;padding:7px 8px;border-radius:10px}
+  .qimgcap{font-size:10px}
+  .qimgbox{margin-top:8px;padding:7px}
+
+  /* ---- search / index / chips / toasts ---- */
+  #searchinput{font-size:12.5px;padding:7px 9px;border-radius:10px}
+  .searchhint,#searchcnt,.sres .sh,.sres .sn{font-size:10px}
+  .sres .sx{font-size:11.5px}
+  .sres{padding:6px 7px;border-left-width:4px}
+  .tchip{font-size:10px;padding:4px 7px 4px 6px;gap:4px}
+  .tchip .ti{font-size:12px}
+  .tchip .tn{font-size:9px;padding:0 5px}
+  .ic{min-width:22px;height:18px;font-size:9px;border-radius:5px}
+  #idxpanel,#searchpanel{padding:8px 9px !important;border-radius:13px}
+  #toast{font-size:11px;padding:8px 12px;bottom:52px !important;max-width:92vw}
+  #filterbar{bottom:52px !important;padding:6px 9px;gap:5px;border-radius:11px;max-width:94vw}
+  #filterbar .fbtxt{font-size:10.5px}
+  #filterbar .fbicon{font-size:13px}
+
+  /* ---- popups ---- */
+  #whycard,#aisetcard,#rptcard,#confirmwrap > div{border-radius:14px !important;padding:11px 12px !important;width:min(96vw,430px) !important}
+  .rlabel{display:none !important}
+}
 </style>
 </head>
 <body>
